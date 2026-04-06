@@ -1,10 +1,54 @@
-# Lesson + student work → gap suggestions (prototype)
+# Lesson + Student Work → Learning Gap Analysis (Prototype)
 
-Small Python app: feed lesson context + student responses, get a JSON list of possible learning gaps with scaffold/extension bullets. Rules only—no model API.
+This project is a **small working prototype** of an AI-assisted instructional support system.
 
-See **MAINTAINERS.md** for where the logic lives if you're editing it.
+It demonstrates how lesson materials and student work can be processed to:
 
-## Setup
+* Identify **learning gaps**
+* Classify gap types (conceptual, procedural, etc.)
+* Generate **instructional scaffolds and extensions**
+
+The goal is to simulate a **core “data-to-instruction” pipeline** for an edtech platform.
+
+---
+
+## 🧠 What this prototype shows
+
+This prototype focuses on the **core intelligence layer**:
+
+INPUT (lesson + student work)
+→ ANALYSIS (learning gap detection)
+→ CLASSIFICATION (gap types)
+→ OUTPUT (scaffolds + extensions)
+
+It is intentionally lightweight and uses **rule-based heuristics** instead of LLM APIs.
+
+---
+
+## 📁 Project Structure
+
+```
+project/
+│
+├── README.md
+├── requirements.txt
+│
+├── data/                # Sample inputs
+├── src/
+│   ├── ingest.py        # Input loading (text + basic PDF)
+│   ├── analyze.py       # Learning gap detection
+│   ├── classify.py      # Gap classification
+│   ├── scaffold.py      # Instructional suggestions
+│   ├── main.py          # Pipeline runner
+│   ├── ui.py            # Optional Streamlit UI
+│
+├── output/
+│   └── sample_output.json
+```
+
+---
+
+## ⚙️ Setup
 
 ```bash
 cd project
@@ -13,60 +57,124 @@ python -m venv .venv
 pip install -r requirements.txt
 ```
 
-Tesseract: needed for image-like PDFs / scans. [Windows builds](https://github.com/UB-Mannheim/tesseract/wiki). Optionally set `TESSERACT_CMD` to the `.exe` path if it's not on PATH.
+### Optional: OCR support
 
-## Run (CLI)
+This prototype includes optional OCR support for scanned PDFs using Tesseract.
 
-From `project/`:
+Install from:
+https://github.com/UB-Mannheim/tesseract/wiki
+
+If needed, set:
+
+```
+TESSERACT_CMD=<path-to-tesseract.exe>
+```
+
+---
+
+## ▶️ Run (CLI)
 
 ```bash
-# Bundled text demo → output/sample_output.json
+# Default demo
 python src/main.py
 
-# Three paths: teacher PDF, student materials PDF, student work PDF
+# With PDF inputs
 python src/main.py teacher.pdf materials.pdf work.pdf -n 5 -o out.json
 
-# Legacy: one context file + student file
+# With text inputs
 python src/main.py data/lesson.txt data/student.txt
 ```
 
-Flags: `-n` max rows (default 3), `-o` output path, `--assessment-blank` extra context PDF, `--flat` raw array only.
+Flags:
 
-## Streamlit
+* `-n`: max number of support areas (default: 3)
+* `-o`: output file path
+* `--assessment-blank`: optional additional context
+* `--flat`: return raw array only
+
+---
+
+## 🖥️ Run (UI)
 
 ```bash
 streamlit run src/ui.py
 ```
 
-Upload lesson files, student work, optional extras. UI asks the pipeline for **all** ranked gaps (no `-n`). CLI keeps `-n` for shorter files.
+Upload lesson materials and student work to see generated support areas.
 
-## Output
+---
 
-Default JSON:
+## 📤 Output Format
 
 ```json
 {
-  "meta": {
-    "standards_detected": ["6.NS.B.3", "M6.4.2"],
-    "max_support_areas": 3,
-    "support_areas_count": 3,
-    "context_char_count": 0,
-    "student_work_char_count": 0,
-    "inputs": { }
-  },
   "support_areas": [
-    { "gap": "...", "type": ["conceptual"], "evidence": "...", "scaffold": [], "extension": [] }
+    {
+      "gap": "Decimal placement misunderstanding",
+      "type": ["conceptual", "procedural"],
+      "evidence": "Incorrect decimal placement in multiplication",
+      "scaffold": [
+        "Use place value chart",
+        "Multiply as whole numbers, then adjust decimal"
+      ],
+      "extension": [
+        "Provide multi-step decimal challenges"
+      ]
+    }
   ]
 }
 ```
 
-Lesson PDFs often say "your friend"; output strings are normalized to **the student** in JSON (see `student_language.py`).
+---
 
-## Data in this repo
+## 🧩 Assumptions
 
-`data/*.txt` includes a paraphrased M6.4.2-style bundle for demos—not full partner PDFs. Use your own files for real runs.
+* Inputs are primarily **clean text or machine-readable PDFs**
+* Student work is available as typed responses (not handwritten)
+* Heuristic rules approximate instructional reasoning
 
-## Caveats
+---
 
-Heuristics miss a lot; OCR is brittle; standards are regex-pulled from text. Fine for a prototype, not for high-stakes scoring.
-# educational_system
+## ⚠️ Limitations
+
+* PDF parsing is basic (PyPDF2 + optional OCR)
+* No reliable handling of complex layouts (tables, diagrams)
+* OCR is brittle and may introduce noise
+* Gap detection is rule-based (not model-driven)
+* Standards detection uses simple regex extraction
+
+---
+
+## 🚀 Future Improvements
+
+This prototype is designed to evolve toward a production system:
+
+* Robust document ingestion (PDF, images, OCR, layout parsing)
+* LLM-based reasoning and scaffold generation
+* Privacy-first data handling (anonymization, secure processing)
+* Standards-aligned strategy library
+* Feedback loops and continuous improvement
+
+---
+
+## 🎯 Why this matters
+
+This project demonstrates how raw instructional materials can be transformed into **actionable teaching strategies**.
+
+It reflects a core idea:
+
+> Translating student performance + context → meaningful instructional support
+
+---
+
+## 🧪 Notes
+
+* Sample data in `/data` is simplified and paraphrased
+* Designed for demonstration purposes only
+* Not suitable for high-stakes assessment
+
+---
+
+## 📌 Maintainers
+
+See `MAINTAINERS.md` for details on where logic is implemented.
