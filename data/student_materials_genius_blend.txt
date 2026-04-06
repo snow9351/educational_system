@@ -1,0 +1,11 @@
+Student-facing anchors (paraphrased; matches M6.4.2 Multiply Decimals themes).
+
+Opening: Which one doesn't belong among 0.04, 0.4, 4/100, (1/10)*(4/10)?
+
+Background: Powers of ten scaling (e.g. 12.3 * ___ = 123), whole-number multiplication review, fraction-decimal ties.
+
+Think: Evelyn uses fractions: (0.2)*(0.3) = (2/10)*(3/10) = 6/100 = 0.06. Follow-up: describe the pattern of decimal places in factors vs product.
+
+Application: Given 96 * 437 = 41952, place the decimal in (0.96)*(43.7) and (9.6)*(0.437).
+
+Practice: Place decimals in digit-only products; word problems with money and rounding to the nearest cent.

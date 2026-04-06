@@ -1,0 +1,7 @@
+Genius Blend / Saga-style context (paraphrased for the prototype repo; use your real teacher PDF when running).
+
+Unit focus: M6.4.2 Multiply decimals using the standard algorithm.
+
+Standard (Common Core): 6.NS.B.3 Fluently add, subtract, multiply, and divide multi-digit decimals using the standard algorithm for each operation.
+
+Fellow notes: The standard algorithm for multiplying decimals builds on place value and partial products. A common issue is confusing decimal multiplication with decimal addition (e.g., lining up decimal points or incorrectly "bringing down" a decimal as if adding). Students need explicit practice counting total decimal places in factors to place the decimal in the product, and connecting to fraction or scaling strategies.

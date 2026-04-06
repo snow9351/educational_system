@@ -1,0 +1,78 @@
+{
+  "meta": {
+    "standards_detected": [
+      "6.NS.B.3",
+      "M6.4.2"
+    ],
+    "max_support_areas": 3,
+    "support_areas_count": 3,
+    "context_char_count": 1403,
+    "student_work_char_count": 562,
+    "inputs": {
+      "teacher_or_context": "C:\\Users\\Administrator\\Desktop\\testing\\project\\data\\lesson_context_genius_blend.txt",
+      "student_materials": "C:\\Users\\Administrator\\Desktop\\testing\\project\\data\\student_materials_genius_blend.txt",
+      "assessment_blank": null,
+      "student_work": "C:\\Users\\Administrator\\Desktop\\testing\\project\\data\\saga_student_work_sample.txt"
+    }
+  },
+  "support_areas": [
+    {
+      "gap": "Placing the decimal when the whole-number product is already known",
+      "type": [
+        "conceptual",
+        "procedural"
+      ],
+      "evidence": "1. (0.96) x (43.7) = 419.52",
+      "scaffold": [
+        "Use a place-value chart: multiply as whole numbers, then justify decimal position from total decimal places.",
+        "Use a concrete or visual model (e.g. base-ten blocks, area model) before the symbolic step.",
+        "Have the student restate the problem in their own words and identify what each number represents.",
+        "Connect the operation to a simpler known case, then build back up."
+      ],
+      "extension": [
+        "Use a place-value chart: multiply as whole numbers, then justify decimal position from total decimal places.",
+        "Pose a compare problem: same structure but different magnitude; ask what changes conceptually.",
+        "Introduce a mild counterexample and ask the student to explain why a naive rule would fail."
+      ]
+    },
+    {
+      "gap": "Applying decimal-addition alignment to multiplication (standard algorithm confusion)",
+      "type": [
+        "procedural",
+        "representation",
+        "conceptual"
+      ],
+      "evidence": "1. (0.96) x (43.7) = 419.52",
+      "scaffold": [
+        "Use a place-value chart: multiply as whole numbers, then justify decimal position from total decimal places.",
+        "Co-construct a short checklist of steps and have the student narrate each step aloud.",
+        "Work one fully worked example side-by-side, then a parallel problem with prompts only.",
+        "Use an error-analysis prompt: \"Where might the steps differ for decimals versus whole numbers?\""
+      ],
+      "extension": [
+        "Use a place-value chart: multiply as whole numbers, then justify decimal position from total decimal places.",
+        "Increase digits or steps (e.g. two decimal factors) while keeping the same strategy.",
+        "Mix in one \"missing information\" item so they must choose an operation."
+      ]
+    },
+    {
+      "gap": "Decimal product magnitude (tenths x hundredths -> thousandths)",
+      "type": [
+        "conceptual",
+        "procedural"
+      ],
+      "evidence": "1. (0.96) x (43.7) = 419.52",
+      "scaffold": [
+        "Use a place-value chart: multiply as whole numbers, then justify decimal position from total decimal places.",
+        "Use a concrete or visual model (e.g. base-ten blocks, area model) before the symbolic step.",
+        "Have the student restate the problem in their own words and identify what each number represents.",
+        "Connect the operation to a simpler known case, then build back up."
+      ],
+      "extension": [
+        "Use a place-value chart: multiply as whole numbers, then justify decimal position from total decimal places.",
+        "Pose a compare problem: same structure but different magnitude; ask what changes conceptually.",
+        "Introduce a mild counterexample and ask the student to explain why a naive rule would fail."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+Grade 5 Math — Decimals and Multiplication
+
+Learning objectives:
+- Understand place value for decimals to hundredths.
+- Multiply a decimal by a whole number using place value reasoning.
+- Estimate products before calculating to check reasonableness.
+
+Key ideas:
+- Line up numbers by place value, not by the decimal point when using the standard algorithm incorrectly is a common mistake; the correct approach is to multiply as if there were no decimal, then place the decimal based on total tenths/hundredths in the factors.
+- Always estimate: round decimals to nearest whole number first.
+
+Vocabulary: product, factor, tenths, hundredths, place value.

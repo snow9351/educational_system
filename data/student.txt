@@ -1,0 +1,12 @@
+Name: Alex
+Problem: Multiply 3.4 x 7
+
+My work:
+     3.4
+   x   7
+   -----
+    238  
+
+I got 238 because I multiplied 34 x 7 = 238 and I think the decimal goes after the 2 so maybe 2.38? I'm not sure.
+
+I didn't estimate first.
